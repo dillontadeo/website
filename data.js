@@ -1,4 +1,42 @@
 window.SITE_DATA = {
+  bridges: {
+    ebitda: {
+      title: "Reported to adjusted EBITDA",
+      desc: "Normalizing for items a buyer or lender would not expect to repeat.",
+      steps: [
+        { label: "Reported EBITDA", value: 1240, total: true },
+        { label: "Owner comp above market", value: 180 },
+        { label: "One-time legal", value: 95 },
+        { label: "Non-cash comp", value: 40 },
+        { label: "Non-recurring income", value: -60 },
+        { label: "Adjusted EBITDA", value: 1495, total: true }
+      ]
+    },
+    arr: {
+      title: "ARR roll-forward",
+      desc: "Where the year's recurring revenue growth came from, and what leaked out.",
+      steps: [
+        { label: "Beginning ARR", value: 4200, total: true },
+        { label: "New logos", value: 900 },
+        { label: "Expansion", value: 450 },
+        { label: "Contraction", value: -150 },
+        { label: "Churn", value: -400 },
+        { label: "Ending ARR", value: 5000, total: true }
+      ]
+    },
+    cash: {
+      title: "EBITDA to free cash flow",
+      desc: "Why a profitable month can still be tight on cash: receivables, payables, and prepaid revenue.",
+      steps: [
+        { label: "EBITDA", value: 1240, total: true },
+        { label: "Increase in AR", value: -180 },
+        { label: "Increase in AP", value: 90 },
+        { label: "Deferred revenue", value: 210 },
+        { label: "Capex", value: -150 },
+        { label: "Free cash flow", value: 1210, total: true }
+      ]
+    }
+  },
   counties: [
     { rank: 1, name: "Alameda", region: "East Bay", score: 77, income: 126240, own: 57, competition: "Moderate", verdict: "Standalone market" },
     { rank: 2, name: "Contra Costa", region: "East Bay", score: 75, income: 125727, own: 68, competition: "Low", verdict: "Standalone market" },
